@@ -596,7 +596,7 @@ class Tooltip extends Component {
     const noChildren = !children;
 
     return (
-      <View onPress={onClose}>
+      <View>
         {/* This renders the fullscreen tooltip */}
         <Modal
           transparent
@@ -605,6 +605,7 @@ class Tooltip extends Component {
         >
           <TouchableWithoutFeedback onPress={onClose}>
             <View
+              onPress={onClose}
               style={[
                 styles.container,
                 contentSizeAvailable &&
@@ -613,6 +614,7 @@ class Tooltip extends Component {
               ]}
             >
               <Animated.View
+                onPress={onClose}
                 style={[
                   styles.background,
                   ...extendedStyles.background,
