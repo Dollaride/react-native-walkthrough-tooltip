@@ -596,13 +596,12 @@ class Tooltip extends Component {
     const noChildren = !children;
 
     return (
-      <View>
+      <View onPress={onClose}>
         {/* This renders the fullscreen tooltip */}
         <Modal
           transparent
           visible={isVisible && !waitingForInteractions}
           onRequestClose={onClose}
-          onPress={onClose}
         >
           <TouchableWithoutFeedback onPress={onClose}>
             <View
