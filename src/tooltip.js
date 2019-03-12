@@ -602,6 +602,7 @@ class Tooltip extends Component {
           transparent
           visible={isVisible && !waitingForInteractions}
           onRequestClose={onClose}
+          onPress={onClose}
         >
           <TouchableWithoutFeedback onPress={onClose}>
             <View
